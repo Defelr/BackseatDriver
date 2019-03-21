@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 8db1bbf59cabc5244a6e83105d0acd3b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Car_Geo
+    100002: CTRL_GRP
+    100004: Front_CTRL
+    100006: Front_L_Tire
+    100008: Front_R_Tire
+    100010: Front_Revolve_GRP
+    100012: L_Door_CTRL
+    100014: Master_CTRL
+    100016: R_Door_CTRL
+    100018: Rear_Revolve_GRP
+    100020: Rotate_CTRL
+    100022: //RootNode
+    100024: Taxi_3_16:Back_Seats
+    100026: Taxi_3_16:Exterior
+    100028: Taxi_3_16:Front_L_Tire_GRP
+    100030: Taxi_3_16:Front_R_Tire_GRP
+    100032: Taxi_3_16:Front_Seats
+    100034: Taxi_3_16:Interior
+    100036: Taxi_3_16:L_Door
+    100038: Taxi_3_16:R_Door
+    100040: Taxi_3_16:Rear_Tires
+    100042: Taxi_3_16:Rear_Tires_GRP
+    400000: Car_Geo
+    400002: CTRL_GRP
+    400004: Front_CTRL
+    400006: Front_L_Tire
+    400008: Front_R_Tire
+    400010: Front_Revolve_GRP
+    400012: L_Door_CTRL
+    400014: Master_CTRL
+    400016: R_Door_CTRL
+    400018: Rear_Revolve_GRP
+    400020: Rotate_CTRL
+    400022: //RootNode
+    400024: Taxi_3_16:Back_Seats
+    400026: Taxi_3_16:Exterior
+    400028: Taxi_3_16:Front_L_Tire_GRP
+    400030: Taxi_3_16:Front_R_Tire_GRP
+    400032: Taxi_3_16:Front_Seats
+    400034: Taxi_3_16:Interior
+    400036: Taxi_3_16:L_Door
+    400038: Taxi_3_16:R_Door
+    400040: Taxi_3_16:Rear_Tires
+    400042: Taxi_3_16:Rear_Tires_GRP
+    2100000: lambert1
+    2100002: Default_Material
+    2300000: Front_L_Tire
+    2300002: Front_R_Tire
+    2300004: Taxi_3_16:Back_Seats
+    2300006: Taxi_3_16:Exterior
+    2300008: Taxi_3_16:Front_Seats
+    2300010: Taxi_3_16:Interior
+    2300012: Taxi_3_16:L_Door
+    2300014: Taxi_3_16:R_Door
+    2300016: Taxi_3_16:Rear_Tires
+    3300000: Front_L_Tire
+    3300002: Front_R_Tire
+    3300004: Taxi_3_16:Back_Seats
+    3300006: Taxi_3_16:Exterior
+    3300008: Taxi_3_16:Front_Seats
+    3300010: Taxi_3_16:Interior
+    3300012: Taxi_3_16:L_Door
+    3300014: Taxi_3_16:R_Door
+    3300016: Taxi_3_16:Rear_Tires
+    4300000: Taxi_3_16:L_Door
+    4300002: Taxi_3_16:Back_Seats
+    4300004: Taxi_3_16:Front_Seats
+    4300006: Taxi_3_16:Interior
+    4300008: Taxi_3_16:Exterior
+    4300010: Taxi_3_16:R_Door
+    4300012: Taxi_3_16:Rear_Tires
+    4300014: Front_R_Tire
+    4300016: Front_L_Tire
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
