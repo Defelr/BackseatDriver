@@ -94,26 +94,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1433185588878278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4966942689321478}
-  - component: {fileID: 20932576847575226}
-  - component: {fileID: 92076412029357204}
-  - component: {fileID: 124742225292288620}
-  - component: {fileID: 81228582474387662}
-  - component: {fileID: 45752463647272784}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1476794846697904
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,11 +236,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476794846697904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2704055, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4122184766139630}
-  - {fileID: 4966942689321478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -405,19 +384,6 @@ Transform:
   m_Father: {fileID: 4357178806091512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4966942689321478
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433185588878278}
-  m_LocalRotation: {x: 0.0813631, y: 0, z: 0, w: 0.99668455}
-  m_LocalPosition: {x: -0.06367135, y: 1.2228087, z: -0.04581535}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4084248764734092}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4970511689001374
 Transform:
   m_ObjectHideFlags: 1
@@ -444,42 +410,6 @@ Transform:
   m_Father: {fileID: 4122184766139630}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20932576847575226
-Camera:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433185588878278}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!23 &23016793948330024
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -867,14 +797,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1569476737735354}
   m_Mesh: {fileID: 4300000, guid: 2ebec4033e2eb704d96447b6446b976f, type: 3}
---- !u!45 &45752463647272784
-Skybox:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433185588878278}
-  m_Enabled: 1
-  m_CustomSkybox: {fileID: 0}
 --- !u!54 &54608297990515826
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -902,20 +824,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.77, y: 1.28, z: 4.74}
   m_Center: {x: 0, y: 0.69, z: 0}
---- !u!81 &81228582474387662
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433185588878278}
-  m_Enabled: 1
---- !u!92 &92076412029357204
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433185588878278}
-  m_Enabled: 1
 --- !u!95 &95283778750674534
 Animator:
   serializedVersion: 3
@@ -949,13 +857,6 @@ MonoBehaviour:
   speed: 180
   antiSlip: 200
   TargetObject: {fileID: 0}
---- !u!124 &124742225292288620
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433185588878278}
-  m_Enabled: 1
 --- !u!195 &195847231314135574
 NavMeshAgent:
   m_ObjectHideFlags: 1
