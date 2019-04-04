@@ -7,7 +7,7 @@ using QPathFinder;
 
 public class GameManager : MonoBehaviour {
 
-    public NavMeshAgent car;
+    public CarController car;
     public GameObject target;
     public GameObject UIDialoguePanel;
 

@@ -26,12 +26,10 @@ public class CarController : MonoBehaviour {
 
         rigidbody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
-        GetNewDestination();
 	}
 	
 	void Update () {
 		GetInput ();
-        GetNewDestination();
 
         /*
         for (int i=0; i < navAgent.path.corners.Length; i++)
@@ -96,10 +94,4 @@ public class CarController : MonoBehaviour {
         if (GetComponent<Rigidbody>().velocity.magnitude > 0.05f)
 			transform.RotateAround (transform.position, Vector3.up, steer * Time.fixedDeltaTime * turnS * isForward);
 	}
-
-
-	void GetNewDestination ()
-	{
-        navAgent.destination = TargetObject.transform.position;
-    }
 }
