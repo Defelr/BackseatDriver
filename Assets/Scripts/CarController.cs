@@ -16,6 +16,9 @@ public class CarController : MonoBehaviour {
     Rigidbody rigidbody;
     NavMeshAgent navAgent;
 
+    // For Gameplay
+    public bool isLoaded;
+
     //Pathfinder pathfinder; 
 
     void Start () {
@@ -23,7 +26,7 @@ public class CarController : MonoBehaviour {
 
         //GameObject pathfinderGameobject = GameObject.Find ("PathfindingManager");
         //pathfinder = pathfinderGameobject.GetComponent<Pathfinder>();
-
+        tag = "Player";
         rigidbody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
 	}

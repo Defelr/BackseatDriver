@@ -5827,6 +5827,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796617551}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1841998553 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 9fadad9602124d1479a267e433ab4970, type: 3}
+  m_PrefabInternal: {fileID: 344937302}
+--- !u!114 &1841998554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841998553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de75e8317ca95c418d9a9c2313c9d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1841998555
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841998553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7.64
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1851810249
 GameObject:
   m_ObjectHideFlags: 0
