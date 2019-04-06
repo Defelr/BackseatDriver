@@ -9,15 +9,13 @@ public class CarController : MonoBehaviour {
 	public float turnSpeed = 30;
 	public float speed = 160; 
 	public float antiSlip = 100.0f;
-
-    public GameObject TargetObject;
 	
 	Transform destination;
     Rigidbody rigidbody;
-    NavMeshAgent navAgent;
 
     // For Gameplay
-    public bool isLoaded;
+    public float earn;
+    public Passenger passengerInCar;
 
     //Pathfinder pathfinder; 
 
@@ -28,8 +26,9 @@ public class CarController : MonoBehaviour {
         //pathfinder = pathfinderGameobject.GetComponent<Pathfinder>();
         tag = "Player";
         rigidbody = GetComponent<Rigidbody>();
-        navAgent = GetComponent<NavMeshAgent>();
-	}
+        earn = 0f;
+
+    }
 	
 	void Update () {
 		GetInput ();
@@ -97,4 +96,9 @@ public class CarController : MonoBehaviour {
         if (GetComponent<Rigidbody>().velocity.magnitude > 0.05f)
 			transform.RotateAround (transform.position, Vector3.up, steer * Time.fixedDeltaTime * turnS * isForward);
 	}
+
+    public void AcceptPassenger(Passenger passenger)
+    {
+        passengerInCar = passenger;
+    }
 }
