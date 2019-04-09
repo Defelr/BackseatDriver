@@ -13,16 +13,21 @@ public class GameManager : MonoBehaviour {
     // For UI
     public GameObject UIDialoguePanel;
     public GameObject FareMeterePanel;
+    public GameObject HintPanel;
     public bool isDialgueShowing;
+    public bool isHintShowing;
     public float dialogueHidingOff;
+    public float hintShowOff;
     public float dialogueMovingSpeed;
     protected Vector3 showingPos;
     protected Vector3 hidingPos;
+    protected Vector3 hintPos;
     protected Vector3 targetPos;
     protected GameObject acceptButton;
     protected GameObject cancelButton;
     protected Text dialogueText;
     protected Text fareMeterText;
+    protected Text hintText;
 
     // For gameplay
     protected Passenger waitingPassenger;
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour {
         dialogueText = UIDialoguePanel.transform.Find("Dialogue").GetComponent<Text>();
         fareMeterText = FareMeterePanel.transform.Find("Text").GetComponent<Text>();
         FareMeterePanel.SetActive(false);
+        hintText = HintPanel.transform.Find("Dialogue").GetComponent<Text>();
     }
 
     private void Update()
@@ -56,13 +62,23 @@ public class GameManager : MonoBehaviour {
         hidingPos = showingPos;
         hidingPos.y -= dialogueHidingOff;
 
+        hintPos = showingPos;
+        hintPos.y -= hintShowOff;
+
         if (isDialgueShowing)
         {
             targetPos = showingPos;
         }
         else
         {
-            targetPos = hidingPos;
+            if (isHintShowing)
+            {
+                targetPos = hintPos;
+            }
+            else
+            {
+                targetPos = hidingPos;
+            }
         }
 
         UIDialoguePanel.transform.position = Vector3.Lerp(UIDialoguePanel.transform.position, targetPos, dialogueMovingSpeed * Time.deltaTime);
@@ -124,8 +140,8 @@ public class GameManager : MonoBehaviour {
                                 hint = "Turn Back";
                             }
 
-                        //print(directionHint);
-                        print(hint);
+                            //print(directionHint);
+                            hintText.text = hint;
                         }
                     }
 
@@ -177,6 +193,7 @@ public class GameManager : MonoBehaviour {
         if (waitingPassenger == null)
         {
             isDialgueShowing = false;
+            isHintShowing = false;
         }
     }
 
@@ -185,6 +202,7 @@ public class GameManager : MonoBehaviour {
         acceptButton.SetActive(false);
         cancelButton.SetActive(false);
         isDialgueShowing = false;
+        isHintShowing = true;
         car.AcceptPassenger(waitingPassenger);
         target = waitingPassenger.task.destination;
         waitingPassenger = null;
@@ -197,6 +215,7 @@ public class GameManager : MonoBehaviour {
         acceptButton.SetActive(false);
         cancelButton.SetActive(false);
         isDialgueShowing = false;
+        isHintShowing = false;
         waitingPassenger = null;
         FareMeterePanel.SetActive(false);
         if (coroutineForDialogueChecking != null)

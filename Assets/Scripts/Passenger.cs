@@ -45,7 +45,10 @@ public class Passenger : MonoBehaviour {
         if (other.tag == "Player")
         {
             CarController car = other.GetComponent<CarController>();
-            gameManager.StartCheckingDialogueValidility();
+            if (!car.passengerInCar)
+            {
+                gameManager.StartCheckingDialogueValidility();
+            }
         }
     }
 }

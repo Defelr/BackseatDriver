@@ -1288,8 +1288,11 @@ MonoBehaviour:
   target: {fileID: 0}
   UIDialoguePanel: {fileID: 1862985309167128}
   FareMeterePanel: {fileID: 1945143328247882}
+  HintPanel: {fileID: 1267770865839616}
   isDialgueShowing: 0
+  isHintShowing: 0
   dialogueHidingOff: 325
+  hintShowOff: 257
   dialogueMovingSpeed: 15
 --- !u!222 &222034367788336048
 CanvasRenderer:
