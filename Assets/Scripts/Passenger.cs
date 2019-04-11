@@ -13,9 +13,10 @@ public class Passenger : MonoBehaviour {
 
     public Task task;
     public GameManager gameManager;
+    public bool isCompleted;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		if (!gameManager)
         {
             gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
@@ -32,7 +33,7 @@ public class Passenger : MonoBehaviour {
         if (other.tag == "Player")
         {
             CarController car = other.GetComponent<CarController>();
-            if (!car.passengerInCar)
+            if (!car.passengerInCar && !isCompleted)
             {
                 // Offer a journey
                 gameManager.OfferToCar(this);

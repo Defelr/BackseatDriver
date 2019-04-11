@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour {
             isDialgueShowing = true;
             dialogueText.text = "Thank you for taking me to " + car.passengerInCar.task.destination.name + ". This is " + car.passengerInCar.task.fee + " dollar for you.";
             Invoke("HideDialogue", 2f);
+            car.DropPassenger();
             car.passengerInCar = null;
         }
     }

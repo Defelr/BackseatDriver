@@ -100,5 +100,17 @@ public class CarController : MonoBehaviour {
     public void AcceptPassenger(Passenger passenger)
     {
         passengerInCar = passenger;
+        PickPassenger(passenger);
+    }
+
+    public void PickPassenger(Passenger passenger)
+    {
+        passenger.transform.localScale = Vector3.zero;
+    }
+
+    public void DropPassenger()
+    {
+        passengerInCar.transform.localScale = Vector3.one;
+        passengerInCar.transform.position = transform.position + transform.right * 1f;
     }
 }
