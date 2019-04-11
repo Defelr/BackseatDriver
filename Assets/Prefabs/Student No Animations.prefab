@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4624823335132092}
   - component: {fileID: 135133853786476086}
   - component: {fileID: 114660882229108264}
+  - component: {fileID: 65451614663226110}
   m_Layer: 0
   m_Name: Student No Animations
   m_TagString: Untagged
@@ -187,6 +188,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1397375974283392}
   m_Mesh: {fileID: 4300000, guid: 562c090fdd1da464b80b926e5d8b31b2, type: 3}
+--- !u!65 &65451614663226110
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1974934844207268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114660882229108264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +215,7 @@ MonoBehaviour:
     destination: {fileID: 0}
     fee: 10
   gameManager: {fileID: 0}
+  isCompleted: 0
 --- !u!135 &135133853786476086
 SphereCollider:
   m_ObjectHideFlags: 1

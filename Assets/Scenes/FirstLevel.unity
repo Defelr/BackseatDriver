@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -416,6 +416,51 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -798.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 148.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 181.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 66.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -523.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 148.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -970.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -195.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224489301161361650, guid: 6d45b6489d8401a46a03c1b594623d84,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.000023
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d45b6489d8401a46a03c1b594623d84, type: 2}
@@ -1124,6 +1169,10 @@ Prefab:
       propertyPath: task.destination
       value: 
       objectReference: {fileID: 512597314}
+    - target: {fileID: 1682847044662490, guid: 8405ae97751854c4788f738e64452a71, type: 2}
+      propertyPath: m_Name
+      value: Female
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8405ae97751854c4788f738e64452a71, type: 2}
   m_IsPrefabParent: 0
@@ -2716,6 +2765,10 @@ Prefab:
       propertyPath: task.destination
       value: 
       objectReference: {fileID: 1244931702}
+    - target: {fileID: 1974934844207268, guid: 60070ec4abfed44469f568f88ccac5f8, type: 2}
+      propertyPath: m_Name
+      value: 'Student '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60070ec4abfed44469f568f88ccac5f8, type: 2}
   m_IsPrefabParent: 0

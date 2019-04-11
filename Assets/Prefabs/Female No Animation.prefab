@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4788731217097450}
   - component: {fileID: 135768369635605866}
   - component: {fileID: 114430528321711636}
+  - component: {fileID: 65231152489131414}
   m_Layer: 0
   m_Name: Female No Animation
   m_TagString: Untagged
@@ -187,6 +188,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358564246169672}
   m_Mesh: {fileID: 4300000, guid: 9fadad9602124d1479a267e433ab4970, type: 3}
+--- !u!65 &65231152489131414
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682847044662490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114430528321711636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +215,7 @@ MonoBehaviour:
     destination: {fileID: 0}
     fee: 10
   gameManager: {fileID: 0}
+  isCompleted: 0
 --- !u!135 &135768369635605866
 SphereCollider:
   m_ObjectHideFlags: 1
