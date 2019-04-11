@@ -420,47 +420,47 @@ Prefab:
     - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -798.7
+      value: -629.8
       objectReference: {fileID: 0}
     - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 148.7
+      value: 210.4
       objectReference: {fileID: 0}
     - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 181.5
+      value: 519.4
       objectReference: {fileID: 0}
     - target: {fileID: 224060287640403340, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 66.2
+      value: 189.4
       objectReference: {fileID: 0}
     - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -523.4
+      value: 158.1
       objectReference: {fileID: 0}
     - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 148.3
+      value: 209.1
       objectReference: {fileID: 0}
     - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -970.4
+      value: -331.6
       objectReference: {fileID: 0}
     - target: {fileID: 224478950938864184, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: -195.3
+      value: -128
       objectReference: {fileID: 0}
     - target: {fileID: 224489301161361650, guid: 6d45b6489d8401a46a03c1b594623d84,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -5.000023
+      value: -5.0000305
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d45b6489d8401a46a03c1b594623d84, type: 2}
