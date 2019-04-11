@@ -1480,7 +1480,7 @@ GameObject:
   - component: {fileID: 512597310}
   - component: {fileID: 512597314}
   m_Layer: 0
-  m_Name: Destination
+  m_Name: Office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3827,7 +3827,7 @@ GameObject:
   - component: {fileID: 1244931703}
   - component: {fileID: 1244931702}
   m_Layer: 0
-  m_Name: StuDestination
+  m_Name: Bus Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
