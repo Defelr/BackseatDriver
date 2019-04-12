@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour {
 	public float turnSpeed = 30;
 	public float speed = 160; 
 	public float antiSlip = 100.0f;
+    public bool isStopped;
 	
 	Transform destination;
     Rigidbody rigidbody;
@@ -27,7 +28,7 @@ public class CarController : MonoBehaviour {
         tag = "Player";
         rigidbody = GetComponent<Rigidbody>();
         earn = 0f;
-
+        isStopped = false;
     }
 	
 	void Update () {
@@ -46,10 +47,16 @@ public class CarController : MonoBehaviour {
 	// use this for rigidbody physics updates
 	void FixedUpdate () {
 
-		ApplyFriction ();
-		ApplyThrottle ();
-		ApplySteering ();
-
+        if (isStopped)
+        {
+            rigidbody.velocity = Vector3.zero;
+        }
+        else
+        {
+            ApplyFriction();
+            ApplyThrottle();
+            ApplySteering();
+        }
 	}
 
 	void GetInput() {
@@ -112,5 +119,15 @@ public class CarController : MonoBehaviour {
     {
         passengerInCar.transform.localScale = Vector3.one;
         passengerInCar.transform.position = transform.position + transform.right * 1f;
+    }
+
+    public void StopMoving()
+    {
+        isStopped = true;
+    }
+
+    public void StartMoving()
+    {
+        isStopped = false;
     }
 }

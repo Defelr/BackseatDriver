@@ -1290,8 +1290,8 @@ MonoBehaviour:
   HintPanel: {fileID: 1267770865839616}
   isDialgueShowing: 0
   isHintShowing: 0
-  dialogueHidingOff: 325
-  hintShowOff: 257
+  dialogueHidingOff: 430
+  hintShowOff: 273
   dialogueMovingSpeed: 15
 --- !u!222 &222004940821346102
 CanvasRenderer:
@@ -1463,8 +1463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -773.17993, y: 153.4}
-  m_SizeDelta: {x: 232.48, y: 75.6}
+  m_AnchoredPosition: {x: -629.8, y: 210.4}
+  m_SizeDelta: {x: 519.4, y: 189.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224105934182226822
 RectTransform:
@@ -1631,8 +1631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -420.4, y: 153}
-  m_SizeDelta: {x: -873.9, y: -190.1}
+  m_AnchoredPosition: {x: 158.1, y: 209.1}
+  m_SizeDelta: {x: -331.6, y: -128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224489301161361650
 RectTransform:
@@ -1650,7 +1650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -5.0000305, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224669179534533980

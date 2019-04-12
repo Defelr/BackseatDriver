@@ -172,6 +172,7 @@ public class GameManager : MonoBehaviour {
         dialogueText.text = "Passenger " + passenger.name + " needs you to take a ride to " + passenger.task.destination.name + ", and you will get "
             + passenger.task.fee + " dollar. Would you like to accecpt it?";
         waitingPassenger = passenger;
+        car.StopMoving();
     }
 
     public void CheckForDestination(Destination destination)
@@ -209,6 +210,7 @@ public class GameManager : MonoBehaviour {
         waitingPassenger = null;
         FareMeterePanel.SetActive(true);
         fareMeterText.text = car.passengerInCar.task.fee.ToString();
+        car.StartMoving();
     }
 
     public void CancelTask()
@@ -224,6 +226,7 @@ public class GameManager : MonoBehaviour {
             StopCoroutine(coroutineForDialogueChecking);
             coroutineForDialogueChecking = null;
         }
+        car.StartMoving();
     }
 
     public void StartCheckingDialogueValidility()
