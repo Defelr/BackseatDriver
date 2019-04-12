@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1288,6 +1288,7 @@ MonoBehaviour:
   UIDialoguePanel: {fileID: 1862985309167128}
   FareMeterePanel: {fileID: 1945143328247882}
   HintPanel: {fileID: 1267770865839616}
+  potraitPhoto: {fileID: 114344551742569120}
   isDialgueShowing: 0
   isHintShowing: 0
   dialogueHidingOff: 430

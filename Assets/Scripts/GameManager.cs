@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     public GameObject UIDialoguePanel;
     public GameObject FareMeterePanel;
     public GameObject HintPanel;
+    public Image potraitPhoto;
     public bool isDialgueShowing;
     public bool isHintShowing;
     public float dialogueHidingOff;
@@ -28,10 +29,12 @@ public class GameManager : MonoBehaviour {
     protected Text dialogueText;
     protected Text fareMeterText;
     protected Text hintText;
+    protected Slider contentSlider;
 
     // For gameplay
     protected Passenger waitingPassenger;
     protected IEnumerator coroutineForDialogueChecking;
+    protected Vector3 carLastPos;
 
     protected Rigidbody carRigid;
 
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour {
         fareMeterText = FareMeterePanel.transform.Find("Text").GetComponent<Text>();
         FareMeterePanel.SetActive(false);
         hintText = HintPanel.transform.Find("Dialogue").GetComponent<Text>();
+        contentSlider = UIDialoguePanel.transform.Find("Slider").GetComponent<Slider>();
     }
 
     private void Update()
@@ -153,7 +157,14 @@ public class GameManager : MonoBehaviour {
                 }
                 );
         }
-        
+
+        if (car && car.passengerInCar)
+        {
+            potraitPhoto.sprite = car.passengerInCar.GetPotrait();
+            car.passengerInCar.UpdateContentLevel(30f * (Vector3.Distance(carLastPos, target.transform.position)-Vector3.Distance(car.transform.position, target.transform.position)) * Time.deltaTime);
+            carLastPos = car.transform.position;
+            contentSlider.value = car.passengerInCar.GetContentLevel();
+        }
     }
 
     public void OfferToCar(Passenger passenger)
@@ -179,11 +190,20 @@ public class GameManager : MonoBehaviour {
     {
         if (destination == car.passengerInCar.task.destination)
         {
-            // Ready to end the task and get paid
-            car.earn += car.passengerInCar.task.fee;
-
+            car.passengerInCar.isCompleted = true;
+            contentSlider.value = contentSlider.minValue;
             isDialgueShowing = true;
-            dialogueText.text = "Thank you for taking me to " + car.passengerInCar.task.destination.name + ". This is " + car.passengerInCar.task.fee + " dollar for you.";
+            // Ready to end the task and get paid
+            if (car.passengerInCar.contentLevel > 50f)
+            {
+                car.earn += car.passengerInCar.task.fee;
+                dialogueText.text = "Thank you for taking me to " + car.passengerInCar.task.destination.name + ". This is " + car.passengerInCar.task.fee + " dollar for you.";
+            }
+            else
+            {
+                dialogueText.text = "Thank you for taking me to " + car.passengerInCar.task.destination.name;
+            }
+
             Invoke("HideDialogue", 2f);
             car.DropPassenger();
             car.passengerInCar = null;
@@ -203,7 +223,7 @@ public class GameManager : MonoBehaviour {
     {
         acceptButton.SetActive(false);
         cancelButton.SetActive(false);
-        isDialgueShowing = false;
+        //isDialgueShowing = false;
         isHintShowing = true;
         car.AcceptPassenger(waitingPassenger);
         target = waitingPassenger.task.destination;
@@ -211,13 +231,14 @@ public class GameManager : MonoBehaviour {
         FareMeterePanel.SetActive(true);
         fareMeterText.text = car.passengerInCar.task.fee.ToString();
         car.StartMoving();
+        carLastPos = car.transform.position;
     }
 
     public void CancelTask()
     {
         acceptButton.SetActive(false);
         cancelButton.SetActive(false);
-        isDialgueShowing = false;
+        //isDialgueShowing = false;
         isHintShowing = false;
         waitingPassenger = null;
         FareMeterePanel.SetActive(false);

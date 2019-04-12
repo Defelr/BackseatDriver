@@ -97,7 +97,7 @@ Transform:
   m_GameObject: {fileID: 1974934844207268}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 138.67, y: -5.968496e-17, z: 268.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4168106906714688}
   - {fileID: 4050018600204030}
@@ -216,6 +216,13 @@ MonoBehaviour:
     fee: 10
   gameManager: {fileID: 0}
   isCompleted: 0
+  potraits:
+  - {fileID: 21300000, guid: f1f7cddc2402b5843b56dac97380242d, type: 3}
+  - {fileID: 21300000, guid: 1fbb6d4e4d655be4fbe1ec17a6a8a1e1, type: 3}
+  - {fileID: 21300000, guid: fc7dbabd280b61045b5ea55296620725, type: 3}
+  - {fileID: 21300000, guid: e4e7e587f21d7734da402ca86d387d21, type: 3}
+  - {fileID: 21300000, guid: b3c2712f49db3b041967f937036f6a9c, type: 3}
+  contentLevel: 0
 --- !u!135 &135133853786476086
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -226,5 +233,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 14.09
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
