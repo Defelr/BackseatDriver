@@ -86,7 +86,7 @@ public class Passenger : MonoBehaviour {
 
     public void UpdateContentLevel(float change)
     {
-        contentLevel += change;
+        contentLevel = Mathf.Max(0f, Mathf.Min(contentLevel + change, 100f));
     }
 
     public float GetContentLevel()

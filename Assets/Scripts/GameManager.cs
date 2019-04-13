@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using QPathFinder;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public GameObject FareMeterePanel;
     public GameObject HintPanel;
     public Image potraitPhoto;
+    public Text levelCompleteText;
     public bool isDialgueShowing;
     public bool isHintShowing;
     public float dialogueHidingOff;
@@ -35,6 +37,8 @@ public class GameManager : MonoBehaviour {
     protected Passenger waitingPassenger;
     protected IEnumerator coroutineForDialogueChecking;
     protected Vector3 carLastPos;
+    public List<Passenger> allPassengers;
+    public bool isLevelCompleted;
 
     protected Rigidbody carRigid;
 
@@ -48,6 +52,9 @@ public class GameManager : MonoBehaviour {
         hidingPos = showingPos;
         hidingPos.y -= dialogueHidingOff;
 
+        // For Gameplay
+        allPassengers = new List<Passenger>(GameObject.FindObjectsOfType<Passenger>());
+
         // For UI
         acceptButton = UIDialoguePanel.transform.Find("AcceptButton").gameObject;
         cancelButton = UIDialoguePanel.transform.Find("CancelButton").gameObject;
@@ -55,9 +62,10 @@ public class GameManager : MonoBehaviour {
         cancelButton.SetActive(false);
         dialogueText = UIDialoguePanel.transform.Find("Dialogue").GetComponent<Text>();
         fareMeterText = FareMeterePanel.transform.Find("Text").GetComponent<Text>();
-        FareMeterePanel.SetActive(false);
+        FareMeterePanel.SetActive(true);
         hintText = HintPanel.transform.Find("Dialogue").GetComponent<Text>();
         contentSlider = UIDialoguePanel.transform.Find("Slider").GetComponent<Slider>();
+        levelCompleteText.enabled = false;
     }
 
     private void Update()
@@ -161,10 +169,33 @@ public class GameManager : MonoBehaviour {
         if (car && car.passengerInCar)
         {
             potraitPhoto.sprite = car.passengerInCar.GetPotrait();
-            car.passengerInCar.UpdateContentLevel(30f * (Vector3.Distance(carLastPos, target.transform.position)-Vector3.Distance(car.transform.position, target.transform.position)) * Time.deltaTime);
+            car.passengerInCar.UpdateContentLevel(30f * (Vector3.Distance(carLastPos, target.transform.position)-Vector3.Distance(car.transform.position, target.transform.position)-0.05f) * Time.deltaTime);
             carLastPos = car.transform.position;
             contentSlider.value = car.passengerInCar.GetContentLevel();
         }
+
+        if (!isLevelCompleted)
+        {
+            foreach (Passenger p in allPassengers)
+            {
+                isLevelCompleted = p.isCompleted;
+                if (!isLevelCompleted)
+                {
+                    break;
+                }
+            }
+
+            if (isLevelCompleted)
+            {
+                levelCompleteText.enabled = true;
+                Invoke("BackToMenuScene", 2.3f);
+            }
+        }
+    }
+
+    public void BackToMenuScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void OfferToCar(Passenger passenger)
@@ -203,6 +234,7 @@ public class GameManager : MonoBehaviour {
             {
                 dialogueText.text = "Thank you for taking me to " + car.passengerInCar.task.destination.name;
             }
+            fareMeterText.text = car.earn.ToString();
 
             Invoke("HideDialogue", 2f);
             car.DropPassenger();
@@ -216,6 +248,8 @@ public class GameManager : MonoBehaviour {
         {
             isDialgueShowing = false;
             isHintShowing = false;
+            potraitPhoto.sprite = null;
+            hintText.text = "";
         }
     }
 
@@ -229,7 +263,8 @@ public class GameManager : MonoBehaviour {
         target = waitingPassenger.task.destination;
         waitingPassenger = null;
         FareMeterePanel.SetActive(true);
-        fareMeterText.text = car.passengerInCar.task.fee.ToString();
+        //fareMeterText.text = car.passengerInCar.task.fee.ToString();
+        dialogueText.text = "";
         car.StartMoving();
         carLastPos = car.transform.position;
     }
@@ -241,7 +276,8 @@ public class GameManager : MonoBehaviour {
         //isDialgueShowing = false;
         isHintShowing = false;
         waitingPassenger = null;
-        FareMeterePanel.SetActive(false);
+        FareMeterePanel.SetActive(true);
+        dialogueText.text = "";
         if (coroutineForDialogueChecking != null)
         {
             StopCoroutine(coroutineForDialogueChecking);
